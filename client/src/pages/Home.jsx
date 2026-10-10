@@ -150,40 +150,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Floating 3D Showcase */}
-          <div className="lg:col-span-5 flex justify-center perspective-1000">
-            <div className="relative w-64 sm:w-72 aspect-[3/4] animate-float-3d group">
-              {/* Back ambient 3D shadow */}
-              <div className="absolute inset-0 bg-indigo-500/25 blur-2xl rounded-3xl -translate-z-12 transform scale-95" />
-              
-              {/* 3D Book Container */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 book-spine-effect">
-                <img
-                  src={heroBook.image_url}
-                  alt={heroBook.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent flex flex-col justify-end p-5">
-                  <span className="px-2.5 py-0.5 rounded-full bg-indigo-600 text-white text-[10px] font-bold uppercase tracking-wider w-max mb-1">
-                    Featured Bestseller
-                  </span>
-                  <h3 className="font-bold text-white text-base leading-snug line-clamp-1">
-                    {heroBook.title}
-                  </h3>
-                  <p className="text-xs text-slate-300">by {heroBook.author}</p>
-                  <p className="text-sm font-black text-amber-400 mt-2">
-                    ₹{heroBook.price} <span className="text-[10px] text-slate-400 font-normal">Free delivery</span>
-                  </p>
-                </div>
-              </div>
-
-              {/* Floating review sticker */}
-              <div className="absolute -top-4 -right-4 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md text-slate-900 dark:text-white px-3 py-1.5 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 flex items-center gap-1.5 text-xs font-bold animate-float-gentle">
-                <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-                <span>4.9 / 5.0 Rating</span>
-              </div>
-            </div>
-          </div>
+         {/* Right 3D Opening Book */}
+   <div className="lg:col-span-5 flex justify-center items-center py-6">
+     <Book3D book={heroBook} />
+   </div>
         </div>
 
         {/* Value Prop Badges */}
