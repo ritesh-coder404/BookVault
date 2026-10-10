@@ -20,7 +20,7 @@ import {
 import { supabase, isSupabaseConfigured, localStore } from '../lib/supabase';
 import BookCard from '../components/BookCard';
 import Loading from '../components/Loading';
-
+   import Book3D from '../components/Book3D';
 export default function Home() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
